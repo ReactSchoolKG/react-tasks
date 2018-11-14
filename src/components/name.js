@@ -1,8 +1,9 @@
 import React from 'react';
 
 const Name = ({ item }) => {
-  const newName = `Hi, ${item.name}`;
-  return item.show && <li>{ newName }</li>;
+  const defaultProps = 'Name';
+  const newName = `Hi, ${item.name ? item.name : defaultProps}`;
+  return item.show && <li className="list-item">{ newName }</li>;
 };
 
 export default Name;
