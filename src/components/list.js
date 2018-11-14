@@ -3,26 +3,8 @@ import Name from "./name";
 
 class List extends Component {
   render () {
-    const items = [
-      {
-        name: 'Stas',
-        show: true
-      },
-      {
-        name: 'Andrian',
-        show: true
-      },
-      {
-        name: 'Olga',
-        show: false
-      },
-      {
-        name: 'Nazar',
-        show: true
-      }
-    ];
 
-    const viewItems = items
+    const viewItems = this.props.items
         .map((i, index) => <Name item={i} key={index} />);
     console.log('List in render');
     return (<div className="list">
