@@ -3,27 +3,8 @@ import Name from "./name";
 
 class List extends Component {
   render () {
-    const items = [
-      {
-        name: 'Stas',
-        show: true
-      },
-      {
-        name: 'Andrian',
-        show: true
-      },
-      {
-        name: 'Olga',
-        show: false
-      },
-      {
-        name: 'Nazar',
-        show: true
-      }
-    ];
 
-    const viewItems = items
-        .map((i, index) => <Name item={i} key={index} />);
+    const viewItems = this.props.items.map((i, index) => <Name name={i.name} show={i.show} key={index} />);
     console.log('List in render');
     return (<div className="list">
       Component List
@@ -37,5 +18,4 @@ class List extends Component {
     </div>);
   }
 }
-
 export default List;

@@ -5,7 +5,28 @@ class Example extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      counter: 0
+      counter: 0,
+      items: [
+        {
+          name: 'Stas',
+          show: true
+        },
+        {
+          name: 'Andrian',
+          show: true
+        },
+        {
+          name: 'Olga',
+          show: false
+        },
+        {
+          name: 'Nazar',
+          show: true
+        },
+        {
+          show: true
+        }
+      ]
     };
   }
   render () {
@@ -13,7 +34,7 @@ class Example extends Component {
     return (<div className="example">
       Component Example
       <div>
-        <List>
+        <List items={this.state.items}>
           <h2>
             Information from Example
           </h2>

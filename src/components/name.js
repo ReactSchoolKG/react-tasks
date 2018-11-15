@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Name = ({ item }) => {
-  const newName = `Hi, ${item.name}`;
-  return item.show && <li>{ newName }</li>;
+const Name = ({ name, show }) => {
+  const newName = `Hi, ${name}`;
+  return show && <li>{ newName }</li>;
 };
+
+Name.defaultProps = {
+    name: 'Lesia'
+  };
 
 export default Name;
