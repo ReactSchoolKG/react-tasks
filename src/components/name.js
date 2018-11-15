@@ -1,8 +1,17 @@
-import React from 'react';
+// спочатку сторонні ліби 
+// потім - свої
+import React, { Component } from 'react';
 
-const Name = ({ item }) => {
-  const newName = `Hi, ${item.name}`;
-  return item.show && <li>{ newName }</li>;
-};
+class Name extends Component{
+    render(){
+        const NewName = `Hi ${this.props.name}`;
+        console.log(NewName);
+        return this.props.item.show ? (<li>{NewName}</li>) : ""
+    }
+}
+
+Name.defaultProps = {
+    name: 'Manson',
+  };
 
 export default Name;
