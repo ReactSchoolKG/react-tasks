@@ -7,7 +7,7 @@ class Example extends Component{
         this.state = {
             counter:0
         };
-        this._hendleClickP = this._hendleClickP.bind(this);
+        this._handleClickP = this._handleClickP.bind(this);
     }
     render() {
         const items =[{
@@ -36,18 +36,18 @@ class Example extends Component{
         </div>
         <h1>Counter</h1>
         <div>  
-            <button onClick={()=>this._hendleClickM()}>-</button>
+            <button onClick={()=>this._handleClickM()}>-</button>
             {this.state.counter}
-            <button onClick={this._hendleClickP}>+</button>
+            <button onClick={this._handleClickP}>+</button>
         </div>
         </div>);
     }
-    _hendleClickP(e){
+    _handleClickP(e){
         this.setState({
             counter: this.state.counter + 1
         });
     };
-    _hendleClickM(e){
+    _handleClickM(e){
         if(this.state.counter){
             this.setState({
                 counter: this.state.counter - 1 
