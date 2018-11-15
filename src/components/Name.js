@@ -7,10 +7,9 @@ class Name extends Component {
 	}
 
 	render() {
-		const viewItems = this.props.item.name;
 		return (
 			<div>
-				<ul>{viewItems}</ul>
+				<ul>{this.props.item.show && this.props.item.name}</ul>
 			</div>
 		);
 	}
