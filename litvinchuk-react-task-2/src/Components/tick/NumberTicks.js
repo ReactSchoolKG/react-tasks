@@ -15,8 +15,6 @@ class NumberTicks extends Component {
 
   componentDidMount = () => {
     setInterval(this._updateTickState,1000);
-    document.getElementsByClassName("counter")[0].innerText =  this.state.tick;
-    setInterval(this._showTicks,60000);
   };
 
   componentDidUpdate = () => {
@@ -26,7 +24,7 @@ class NumberTicks extends Component {
 
   render(){
     return <div>
-      <h1 className="counter"> </h1>
+      <h1 className="counter">{this.state.tick}</h1>
       <ul id="listOfItems">
         {this.state.items.map((item, index) => <TickHelper
           key={index}
@@ -52,10 +50,6 @@ class NumberTicks extends Component {
   _deleteFunction = () => (e) => {
     e.preventDefault();
     e.target.parentNode.removeChild(e.target);
-  };
-
-  _showTicks = () => {
-    document.getElementsByClassName("counter")[0].innerText =  this.state.tick;
   };
 
 }
