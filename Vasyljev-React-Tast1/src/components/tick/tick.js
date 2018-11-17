@@ -6,16 +6,25 @@ class Tick extends Component {
         super(props);
         this.state = {
             tick: 0,
-            items: []
+            items: [],
+            color: 'black'
         };
     }
 
     render() {
         return (<div>
                     <h1>{this.state.tick}</h1>
+                    <h2>Color</h2>
+                    <select onChange={this._changeColor}>
+                        <option value="black">Black</option>
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                    </select>
                     <ul>
-                        <ListItem items={this.state.items} func={this._deletItem}/>
+                        <ListItem items={this.state.items} func={this._deletItem} color={this.state.color}/>
                     </ul>
+                    
+                    
                    
                 </div>);
     };
@@ -44,17 +53,20 @@ class Tick extends Component {
     };
 
     _deletItem = (e) => {
-        console.log('Yes');
         let arr = this.state.items;
         let newArr = arr.filter((item) => {
             return (e.target.value !== item);
         });
-        let parentUl = e.target.parentNode;
-        let liEl = e.target;
-        parentUl.removeChild(liEl);
         this.setState({
             items: newArr
         });
+    }
+
+    _changeColor = (e) => {
+        let colorText = e.target.value;
+        this.setState({
+            color: colorText
+        })
     }
 
 }

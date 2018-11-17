@@ -24,3 +24,20 @@ button {
   border-radius: 10px;
   margin: 10px;
 }
+
+.tick-list-item {
+  width: 30px;
+  margin: 0 auto;
+  text-align: left;
+  cursor: pointer;
+}
+
+ul {
+  width: 50px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+select {
+  padding: 10px;
+}
