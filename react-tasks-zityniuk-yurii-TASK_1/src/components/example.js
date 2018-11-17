@@ -5,7 +5,8 @@ class Example extends Component{
     constructor(props){
         super(props);
         this.state = {
-            counter:0
+            counter: 0,
+            value:"",
         };
         this._handleClickP = this._handleClickP.bind(this);
     }
@@ -39,9 +40,11 @@ class Example extends Component{
             <button onClick={()=>this._handleClickM()}>-</button>
             {this.state.counter}
             <button onClick={this._handleClickP}>+</button>
+            <input type="text" value={this.state.value}  onChange={(e) => this.handleChange(e)}/>
         </div>
         </div>);
     }
+    
     _handleClickP(e){
         this.setState({
             counter: this.state.counter + 1
@@ -54,6 +57,13 @@ class Example extends Component{
             });
         }   
     }
+    handleChange(e){
+        this.setState({
+            value: e.target.value,
+        })
+    }
+        
+    
 };
 
 export default  Example
