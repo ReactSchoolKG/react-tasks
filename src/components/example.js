@@ -19,6 +19,7 @@ const items = [
     show: true
   },
   {
+    name:undefined,
     show:true
   }
 ];
@@ -26,7 +27,8 @@ class Example extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      counter: 0
+      counter: 0,
+      newvalue:' '
     };
   }
   render () {
@@ -48,6 +50,9 @@ class Example extends Component {
         { this.state.counter }
         <button onClick={this._handleClickPlus} >+</button>
         <button onClick={this._handleClickMinus} >-</button>
+        <input type="text" value = {this.state.newvalue} onChange = {this._handlerChangeInput}/>
+        <br/>
+        {this.state.newvalue}
       </div>
     </div>);
   }
@@ -63,6 +68,11 @@ class Example extends Component {
         counter: this.state.counter - 1
       });
     }
+  }
+  _handlerChangeInput = e =>{
+    this.setState({
+      newvalue: e.target.value
+    });
   }
 }
 
