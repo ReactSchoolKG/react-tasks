@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TickHelper from './TickHelper';
+import COLORS from './ConstantColors';
 
 import './TickStyle.css';
 
@@ -24,7 +25,7 @@ class NumberTicks extends Component {
 
   render(){
     return <div>
-      <h1 className="counter">{this.state.tick}</h1>
+      <h1 id="counter">{this.state.tick}</h1>
       <ul id="listOfItems">
         {this.state.items.map((item, index) => <TickHelper
           key={index}
@@ -35,9 +36,9 @@ class NumberTicks extends Component {
         />)}
       </ul>
       <select id="select">
-        <option value={"Червоний"}>Червоний</option>
-        <option value={"Чорний"}>Чорний</option>
-        <option value={"Зелений"}>Зелений</option>
+        <option value={COLORS.RED}>Червоний</option>
+        <option value={COLORS.BLACK}>Чорний</option>
+        <option value={COLORS.GREEN}>Зелений</option>
       </select>
     </div>
   }

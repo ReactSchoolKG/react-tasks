@@ -8,7 +8,7 @@
     border: 4px solid darkgrey;
 }
 
-.counter{
+#counter{
     display: flex;
     justify-content: center;
     width: 3%;
