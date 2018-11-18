@@ -44,7 +44,10 @@ class IntervalTick extends Component {
         this.setState({ items: filteredItems });
     }
     componentDidMount() {
-        setInterval(this._tickCounter, 1000);
+        this.timerID = setInterval(this._tickCounter, 1000);
+    }
+    componentWillUnmount() {
+        clearInterval(this.timerID);
     }
 }
 
