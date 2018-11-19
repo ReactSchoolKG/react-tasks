@@ -1,0 +1,14 @@
+.redColor{
+    color: red
+}
+.blackColor{
+    color: black
+}
+.greenColor{
+    color:green
+}
+#Main {
+    display: flex;
+    justify-content: center;
+    border: 1px outset red;
+}
