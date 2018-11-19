@@ -39,12 +39,6 @@ class TickTock extends Component{
         this.setState({
             tick: this.state.tick + 1 
         })
-        if(this.state.tick % 5 === 0){
-            this.state.items.push(this.state.tick);
-            this.setState({
-                items: this.state.items
-            })
-        }
     }
     _deleteHandler = (e) => {
         let newitems = this.state.items.filter((elem)=>{
@@ -53,6 +47,12 @@ class TickTock extends Component{
         this.setState({
             items: newitems
         })
+    }
+
+    componentDidUpdate(){
+        if(this.state.tick % 5 === 0){
+            this.state.items.push(this.state.tick);
+        }
     }
 
     componentDidMount(){
