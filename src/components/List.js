@@ -8,6 +8,7 @@ class List extends Component {
 		));
 		return (
 			<div>
+				Component List
 				<ul>{viewItems}</ul>
 			</div>
 		);

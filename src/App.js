@@ -1,12 +1,15 @@
 import React, { Component } from "react";
-import Example from "./components/Example";
+import Counter from "./components/counter/counter";
+import Time from "./components/tick/Time";
 import "./App.css";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Example />
+        Component App
+        <Counter />
+        <Time />
       </div>
     );
   }

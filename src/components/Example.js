@@ -43,6 +43,7 @@ class Example extends Component {
   render() {
     return (
       <div>
+        Component Example
         <List item={this.state.items} />
         <h1>Counter</h1>
         <div>{this.state.counter}</div>
