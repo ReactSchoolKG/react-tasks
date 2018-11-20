@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import Example from './components/example';
+
 
 import './App.css';
+import Tick from './tick/tick';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Example />
+        <Tick/>
       </div>
     );
   }
