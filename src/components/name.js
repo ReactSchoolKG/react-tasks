@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-const Name = ({ item }) => {
-  const newName = `Hi, ${item.name}`;
-  return item.show && <li>{ newName }</li>;
+const Name = ({ item: { name = "John", show } }) => {
+  const newName = `Hi, ${name}`;
+  return show && <li>{newName}</li>;
 };
 
 export default Name;
