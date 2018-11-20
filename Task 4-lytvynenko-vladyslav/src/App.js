@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 import './App.css';
-import Tick from './tick/tick';
+import Tick from './components/tick/tick';
 
 class App extends Component {
   render() {
