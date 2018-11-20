@@ -5,6 +5,13 @@ const Name = ({ name, show }) => {
   return show && <li>{ newName }</li>;
 };
 
+// class Name extends React.Component  {
+//     render() {
+//         const newName = `Hi, ${this.props.name}`;
+//         return this.props.show && <li>{ newName }</li>;
+//     }
+//   }
+
 Name.defaultProps = {
     name: 'Lesia'
   };

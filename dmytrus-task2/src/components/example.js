@@ -1,9 +1,12 @@
 import React, { Component} from 'react';
-import List from "./list";
+import  Example from './example';
 
 class Example extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      value: ''
+    }
     this.state = {
       counter: 0,
       items: [
@@ -48,6 +51,9 @@ class Example extends Component {
         { this.state.counter }
         <button onClick={this._handleClick} >+</button>
       </div>
+      {this.state.value}
+      <input type='text' value ={this.state.value}
+      onchange={this._handle()}/>
     </div>);
   }
 
