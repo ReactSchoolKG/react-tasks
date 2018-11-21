@@ -15,7 +15,7 @@ class IntervalTick extends Component {
         return (
             <div>
                 <h1>{this.state.tick}</h1>
-                <select onChange={this._colorSelected}>
+                <select value={this.state.color} onChange={this._colorSelected}>
                     <option value={COLORS.BLACK}>Black</option>
                     <option value={COLORS.RED}>Red</option>
                     <option value={COLORS.BLUE}>Blue</option>
