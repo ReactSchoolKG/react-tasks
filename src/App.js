@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-import Example from './components/example';
 
 import './App.css';
-
+import IntervalTick from './components/tick/intervalTick';
+import withTimer from './components/HOC/withTimer';
+import Clock from './components/HOC/clock';
+const UpdatedClock = withTimer(Clock);
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Example />
+        <UpdatedClock/>
+        <UpdatedClock/>
       </div>
     );
   }

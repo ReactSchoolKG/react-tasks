@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Name = ({ item }) => {
-  const newName = `Hi, ${item.name}`;
+  const newName = `Hi, ${item.name||'defaultName'}`;
   return item.show && <li>{ newName }</li>;
 };
 

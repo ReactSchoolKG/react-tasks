@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 import List from "./list";
 
 class Example extends Component {
@@ -8,12 +8,33 @@ class Example extends Component {
       counter: 0
     };
   }
-  render () {
+  render() {
+    const items = [
+      {
+        name: 'Stas',
+        show: true
+      },
+      {
+        name: 'Andrian',
+        show: true
+      },
+      {
+        name: 'Olga',
+        show: false
+      },
+      {
+        name: 'Nazar',
+        show: true
+      },
+      {
+        show: true
+      }
+    ];
     console.log('Example in render');
     return (<div className="example">
       Component Example
       <div>
-        <List>
+        <List items={items}>
           <h2>
             Information from Example
           </h2>
@@ -24,7 +45,7 @@ class Example extends Component {
       </div>
       <h1>Counter</h1>
       <div>
-        { this.state.counter }
+        {this.state.counter}
         <button onClick={this._handleClick} >+</button>
       </div>
     </div>);
