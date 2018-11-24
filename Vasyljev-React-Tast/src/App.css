@@ -1,7 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
-  margin: 0 auto;
+  margin: 100px auto;
   width: 400px;
+
 }
 
 .list-item {
@@ -40,4 +47,40 @@ ul {
 
 select {
   padding: 10px;
+}
+
+.time {
+  border: 1px solid gainsboro;
+  background-color: azure;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hoc-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  width: 100px;
+  height: 100px;
+  border: 1px solid gainsboro;
+  background-color: azure;
+  font-size: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.minus-button {
+  border-radius: 20px 0 0 20px;
+}
+
+.plus-button {
+  border-radius: 0 20px 20px 0;
 }
