@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import CONSTANTS from './CONSTANTS';
 
 class Clock extends Component {
     constructor(props) {
@@ -10,9 +9,10 @@ class Clock extends Component {
     }
 
     render() {
+        const clockStep = this.props.step ? this.props.step : 1;
         return (<div className="time">
                     <h1>{this.state.counter}</h1>
-                    <p>Step - {this.props.step}</p>
+                    <p>Step - {clockStep}</p>
                 </div>);
     }
 
@@ -26,7 +26,12 @@ class Clock extends Component {
     }
 
     componentDidUpdate() {
-
+        if(this.state.counter>10) {
+            console.log("Yes");
+            this.setState({
+                counter: 0
+            });
+        }
     }
     
     

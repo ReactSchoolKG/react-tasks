@@ -28,14 +28,19 @@ function HOCClock(Clock) {
                 this.setState({
                     step: 1
                 });
+                console.log(newStep);
             } else {
                 this.setState({
                     step: newStep
                 });
+                console.log(newStep);
             }
             
         }
         
+        componentDidUpdate() {
+            
+        }
     }
 }
 
