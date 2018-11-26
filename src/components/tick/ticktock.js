@@ -52,6 +52,7 @@ class TickTock extends Component{
     componentDidUpdate(){
         if(this.state.tick % 5 === 0){
             this.state.items.push(this.state.tick);
+            console.log(this.state.items)
         }
     }
 
