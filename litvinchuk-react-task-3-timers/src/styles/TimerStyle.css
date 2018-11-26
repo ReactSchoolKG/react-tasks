@@ -1,0 +1,25 @@
+#inputs div h6{
+    display: inline-block;
+}
+
+#border{
+    border: 3px solid #61dafb;
+    background-color: darkgrey;
+}
+
+#inputs div input{
+    margin-left: 5px;
+    margin-right: 5px;
+    display: inline-block;
+    width: 8%;
+    height: 4%;
+}
+
+#inputs div button{
+    width: 4%;
+    height: 4%;
+}
+
+#h5Container h5{
+    display: inline;
+}
