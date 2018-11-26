@@ -26,11 +26,13 @@ class Clock extends Component {
     }
 
     componentDidUpdate() {
-        if(this.state.counter>10) {
-            console.log("Yes");
-            this.setState({
-                counter: 0
-            });
+        if(this.props.update === true) {
+            if(this.state.counter>10) {
+                this.setState({
+                    counter: 0
+                });
+            }
+        
         }
     }
     
