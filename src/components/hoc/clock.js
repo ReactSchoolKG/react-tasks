@@ -19,12 +19,19 @@ class Clock extends Component {
     this.interval = setInterval(this._clock, 1000);
   }
 
+  componentDidUpdate() {
+    if (this.props.reset) {
+      this.setState({
+        counter: 0
+      })
+    }
+  }
+
   componentWillUnmount () {
     clearInterval(this.interval);
   }
 
   _clock = () => {
-    console.log(this.props.value);
     this.setState({
       counter: this.state.counter + this.props.value
     })

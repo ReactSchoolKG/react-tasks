@@ -13,8 +13,16 @@ function withTimer (WrappedComponent) {
       return <div>
         <button onClick={this._handleChange(1)}>+</button>
         <button onClick={this._handleChange(-1)}>-</button>
-        <WrappedComponent value={this.state.value} />
+        <WrappedComponent value={this.state.value} reset={this.state.reset} />
       </div>
+    }
+
+    componentDidMount () {
+      this.interval = setInterval(this._handleReset, 10000);
+    }
+
+    componentWillUnmount () {
+      clearInterval(this.interval);
     }
 
     _handleChange = num => () => {
@@ -22,6 +30,17 @@ function withTimer (WrappedComponent) {
         value: this.state.value + num
       })
     };
+
+    _handleReset = () => {
+      this.setState({
+        value: 1,
+        reset: true
+      }, () => {
+        this.setState({
+          reset: false
+        })
+      })
+    }
   }
 }
 
