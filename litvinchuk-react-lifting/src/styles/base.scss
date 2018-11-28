@@ -1,0 +1,28 @@
+$blue: #3bbfce;
+$margin: 16px;
+
+.header{
+  height: 10vh;
+}
+
+.verticalLine{
+  position: absolute;
+  height: 100%;
+  border: 2px solid black;
+}
+
+.link{
+  padding: $margin / 2;
+  margin: $margin / 2;
+  border: 2px solid $blue;
+}
+
+.containerOfLists{
+  position: relative;
+  display: flex;
+  width: 30%;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+  border: 2px solid black;
+}
